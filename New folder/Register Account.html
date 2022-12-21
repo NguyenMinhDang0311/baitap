@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Account </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script language="javascript" src="tao%20form%20dang%20ky%20thanh%20vien.js"></script>
+</head>
+<body>
+<form>
+  <h1 style="text-align: center;">Registration Form</h1>
+  <table style="margin: auto;">
+    <tr>
+      <td>
+        Name (*)
+      </td>
+      <td>
+        <input type="text" id="name">
+      </td>
+    </tr>
+    <tr>
+      <td> User name (*)
+      <td>
+        <input type="text" id="username">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Age (*)
+      </td>
+      <td>
+        <input type="txt" id="age">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Mail Address (*)
+      </td>
+      <td>
+        <input type="text" id="mail">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Pass word (*)
+      </td>
+      <td>
+        <input type="password" id="password">
+      </td>
+    </tr>
+    <tr>
+      <td>
+
+      </td>
+
+      <td>
+        <input onclick="send()" type="button" value="Submit">
+
+
+        <input onclick="resetForm()" type="button" value="Reset">
+      </td>
+
+    </tr>
+  </table>
+
+</form>
+<script>
+function send(){
+    var arr = document.getElementsByTagName('input');
+   var fullname = arr[0].value;
+   var username = arr[1].value;
+   var age = arr[2].value;
+   var mail= arr[3].value;
+   var pass = arr[4].value;
+   if(fullname == "" || username == "" || age == "" || mail == "" || pass == ""){
+       alert("Please fill all fields");
+       return;
+   }
+   var choice = confirm('Please confirm your information\n' +'Full name :'+fullname+"\n"+'User name :'+username+"\n"+'Age :'+age+"\n"+'Mail Address :'+mail+"\n"+'Pass word :'+pass+"\n");
+
+   if (choice == 1) {
+       alert('Register successfully');
+
+   }
+   }
+</script>
+
+</body>
+</html>

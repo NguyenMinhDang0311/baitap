@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Log in Account </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script language="javascript" src="tao%20form%20dang%20ky%20thanh%20vien.js"></script>
+</head>
+<body>
+<form>
+    <h1 style="text-align: center;">Log in Form</h1>
+    <table style="margin: auto;">
+
+        <tr>
+            <td> User name (*)
+            <td>
+                <input type="text" id="username">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Pass word (*)
+            </td>
+            <td>
+                <input type="password" id="password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+
+            <td>
+                <input onclick="send()" type="button" value="Submit">
+
+
+                <button type="button" onclick="location.href='Register Account.html';" class="csw-btn-button" >Create a new account</button>
+
+            </td>
+
+        </tr>
+    </table>
+
+</form>
+<script>
+function send(){
+var arr = document.getElementsByTagName('input');
+var username = arr[0].value;
+var pass = arr[1].value;
+if(username == "" ||  pass == ""){
+alert("Please fill all fields");
+return;
+} else
+{
+
+
+alert('Register successfully');
+
+}
+}
+
+</script>
+
+
+</body>
+</html>
